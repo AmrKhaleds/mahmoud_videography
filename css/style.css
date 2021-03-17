@@ -361,9 +361,6 @@ section{
     .max-width{
         max-width: 800px;
     }
-    .about{
-        height: auto;
-    }
     .about .max-width .about-content{
         display: block;
 
@@ -389,6 +386,11 @@ section{
     }
 
     
+}
+@media (max-width: 947px) , (max-height: 712px){
+    .about{
+        height: auto;
+    }
 }
 @media (max-width: 698px){
     .home .home-content .text-2{
