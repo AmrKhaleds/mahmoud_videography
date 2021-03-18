@@ -12,13 +12,50 @@
 body{
     height: 4000px;  /* Remove When Project End */
     background: #111; /* when any image not avilable */
+    
 } 
+body::-webkit-scrollbar{
+    display: none;
+    transition: all 0.9s ease;
+}
+body.sticky::-webkit-scrollbar {
+    display: block;
+    transition: all 0.9s ease;
+
+}
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin:auto;
 }
 /* End Global */
+
+/* Start Scroll bar for smartphone */
+::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+ /* Track */
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(17, 17, 17, 0.3) !important;
+-webkit-border-radius: 10px !important;
+border-radius: 10px !important;
+}
+
+ /* Handle */
+::-webkit-scrollbar-thumb {
+-webkit-border-radius: 10px !important;
+border-radius: 10px !important;
+background: crimson !important; 
+-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5) !important; 
+
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background: crimson !important; 
+}
+
+
+/* End Scroll bar for smartphone */
 
 /* Start loader  */
 .loader_bg {
@@ -91,19 +128,23 @@ body{
 .navbar .menu li {
     display: inline-block;
     list-style: none;
+    transition: all 0.6s ease;
+}
+.navbar .menu li:hover{
+    transform: scale(1.2);
 }
 .navbar .menu li a {
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
-    transition: color 0.6s ease;
+    transition: all 0.6s ease;
 }
 .navbar .menu li a:hover{
     color:crimson;
     transition: 0.6s;
 }
-.navbar.sticky .menu li a:hover{color: rgb(214, 209, 209);}
+.navbar.sticky .menu li a:hover{color:white;}
 /* menu btn styling */
 .menu-btn{
     color: #fff;
@@ -251,7 +292,7 @@ section{padding: 100px 0;}
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     color: white;
-    
+    background-color: #111;
 }
 .services .max-width .title{
     position: relative;
@@ -374,14 +415,17 @@ section{padding: 100px 0;}
         height: 100vh;
         width: 100%;
         background: #111; 
-        right: -100%;
-        top: 0;
+        right: 0;
+        top: -100%;
         text-align: center;
         padding-top: 8vh;
         transition: all 0.7s ease;
     }
     .navbar .menu.active{
-        right: 0;
+        top: 0;
+    }
+    #mainNav{
+        display: none;
     }
     .navbar .menu li{
         display: block;
@@ -434,8 +478,9 @@ section{padding: 100px 0;}
 
     
 }
+/* Modified height when it is 712 px  */
 @media (max-width: 947px) , (max-height: 712px){
-    .about{
+    .about, .services{
         height: auto;
     }
 }
@@ -453,6 +498,12 @@ section{padding: 100px 0;}
     }
 }
 @media (max-width: 352px){
+    .home .home-content .text-2{
+        font-size: 45px;
+    }
+    .home .home-content .text-3{
+        font-size: 25px;
+    }
     .services .max-width .title{
         position: relative;
         text-align: center;
@@ -486,9 +537,20 @@ section{padding: 100px 0;}
         
     }
 }
+@media (max-width: 330px){
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .home .home-content .text-2{
+        font-size: 40px;
+    }
+    .home .home-content .text-3{
+        font-size: 20px;
+    }
+}
+
 @media (min-width: 947px){
     .about .max-width .about-content .right{
-        text-align: justify;        
-              
+        text-align: justify;
     }
 }
