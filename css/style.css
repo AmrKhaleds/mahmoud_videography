@@ -1,6 +1,6 @@
 /* import font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
+/* End import */
 
 /* Start Global */
 *{
@@ -8,22 +8,19 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-
 }
 body{
     height: 4000px;  /* Remove When Project End */
-    background: #111;
+    background: #111; /* when any image not avilable */
 } 
-/* End Global */
-
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin:auto;
-
 }
+/* End Global */
 
-
+/* Start loader  */
 .loader_bg {
     display: flex;
     position: fixed;
@@ -38,10 +35,7 @@ body{
     overflow-y: hidden;
     transition: all 0.2s ease;
 }
-.loader {
-    position: relative;
-
-}
+.loader {position: relative;}
 .loader span{
     position: relative;
     text-size-adjust: auto;
@@ -55,20 +49,16 @@ body{
     text-shadow: -1px 9px 11px rgba(124, 126, 136, 0.2);
 }
 @keyframes animate{
-    0%,40%,100%
-    {
+    0%,40%,100%{
         transform: translateY(0);
     }
-    20%
-    {
+    20%{
         transform: translateY(-50px);
     }
 }
-
-
+/* End loader */
 
 /* Start Navbar */
-
 .navbar{
     position: fixed;
     /* background-color: crimson; */
@@ -81,27 +71,22 @@ body{
 .navbar.sticky{
     background-color: crimson;
     padding: 15px 0;
-
 }
 .navbar .max-width{
     display:flex;
     align-items: center;
-    justify-content: space-between;
-        
+    justify-content: space-between; 
 }
-.navbar .logo a {
+.navbar .logo a{
     color :#fff;
     font-size: 35px;
     font-weight: 600;
-
 }
-.navbar .logo a span{
-    color: crimson;
-}
+.navbar .logo a:focus{outline: none;}
+.navbar .logo a span{color: crimson;}
 .navbar.sticky .logo a span{
     color: white;
     transition: color 0.6s ease;
-
 }
 .navbar .menu li {
     display: inline-block;
@@ -114,16 +99,11 @@ body{
     margin-left: 25px;
     transition: color 0.6s ease;
 }
-
 .navbar .menu li a:hover{
     color:crimson;
     transition: 0.6s;
-
 }
-.navbar.sticky .menu li a:hover{
-    color: rgb(214, 209, 209);
-}
-
+.navbar.sticky .menu li a:hover{color: rgb(214, 209, 209);}
 /* menu btn styling */
 .menu-btn{
     color: #fff;
@@ -131,33 +111,28 @@ body{
     cursor: pointer;
     display: none;
 }
-
 /* End Nav */
 
-
-
-
 /* Start Home */
-
 .home{
     display: flex;
     background: url('/img/banner.jpg') no-repeat center;
+    background-size:cover ;
+    background-attachment: fixed;
     height: 100vh;
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
-    background-size:cover
-    
 }
 .home .max-width{
     margin : auto 0 auto 40px;
     border-left: 3px solid crimson;
-    border-radius: 15px;
-    
+    border-radius: 15px; 
 }
 .home .home-content .text-1{
     font-size: 27px;
-    transition: linear;}
+    transition: linear;
+}
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
@@ -188,13 +163,9 @@ body{
     background: none;
     color : crimson;
     transition: all 0.6s ease;
-
 }
 /* start about */
-section{
-    padding: 100px 0;
-
-}
+section{padding: 100px 0;}
 .about{
     font-family: 'Poppins', sans-serif;
     background-color: #fff;
@@ -235,19 +206,15 @@ section{
     align-items: center;
     justify-content: space-between;
 }
-.about .max-width .about-content .left{
-    width: 45%;
-}
+.about .max-width .about-content .left{width: 45%;}
 .about .max-width .about-content .left img{
+
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
-
 }
-.about .max-width .about-content .right{
-    width: 55%;
-}
+.about .max-width .about-content .right{width: 55%;}
 .about .max-width .about-content .right .text{
     font-size: 25px;
     font-weight: 600;
@@ -277,12 +244,92 @@ section{
     color : crimson;
     transition: all 0.6s ease;
 }
+/* End about */
 
+/* Start services */
+.services{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    color: white;
+    
+}
+.services .max-width .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+.services .max-width .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 4px;
+    background: rgb(255, 255, 255);
+    transform: translateX(-50%);
+}
+.services .max-width .title::after{
+    content: "What i provide";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 18px;
+    color: crimson;
+    padding: 5px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.services .services-content{
+    position: relative;/* to make divs wrap */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap:40px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.services .services-content .card{
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100%;
 
+}
+.services .services-content .card:hover{
+    background-color: crimson;
+    
+}
+.services .services-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover .box{
+    transition: all 0.3s ease;
 
+    transform: scale(1.05);
+}
+.services .services-content .card i{
+    font-size: 50px;
+    color: crimson;
+    padding-bottom: 15px;
+}
+.services .services-content .card:hover i{
+    color: white;
+    transition: all 0.3s ease;
+}
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px;
+}
 
-
-
+/* End services */
 
 
 
@@ -384,6 +431,7 @@ section{
         display: inline-block;
         text-align: center;        
     }
+    
 
     
 }
@@ -403,6 +451,40 @@ section{
 @media (max-width: 429px){
     .loader_bg .loader{
         transform: scale(0.7);
+    }
+}
+@media (max-width: 352px){
+    .services .max-width .title{
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+    }
+    .services .max-width .title::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 180px;
+        height: 4px;
+        background: rgb(255, 255, 255);
+        transform: translateX(-50%);
+    }
+    .services .max-width .title::after{
+        content: "What i provide";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        font-size: 15px;
+        color: crimson;
+        padding: 5px;
+        background: #111;
+        transform: translateX(-50%);
+        
     }
 }
 @media (min-width: 947px){
