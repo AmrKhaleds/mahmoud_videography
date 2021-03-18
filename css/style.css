@@ -416,16 +416,13 @@ section{padding: 100px 0;}
         width: 100%;
         background: #111; 
         right: 0;
-        top: -100%;
+        bottom: -100%;
         text-align: center;
         padding-top: 8vh;
         transition: all 0.7s ease;
     }
     .navbar .menu.active{
-        top: 0;
-    }
-    #mainNav{
-        display: none;
+        bottom: 0;
     }
     .navbar .menu li{
         display: block;
