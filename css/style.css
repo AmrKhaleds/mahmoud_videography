@@ -416,7 +416,7 @@ section{padding: 100px 0;}
         width: 100%;
         background: #111; 
         right: 0;
-        bottom: -100%;
+        bottom: -100vh;
         text-align: center;
         padding-top: 8vh;
         transition: all 0.7s ease;
