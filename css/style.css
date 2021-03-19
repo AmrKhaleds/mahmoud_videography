@@ -11,7 +11,7 @@
 }
 body{
     height: 4000px;  /* Remove When Project End */
-    background: #111; /* when any image not avilable */
+    /* background: #111; when any image not avilable */
     
 } 
 body::-webkit-scrollbar{
@@ -157,6 +157,8 @@ background: crimson !important;
 /* Start Home */
 .home{
     display: flex;
+    background: #111; /* when any image not avilable */
+
     background: url('/img/banner.jpg') no-repeat center;
     background-size:cover ;
     background-attachment: fixed;
@@ -164,6 +166,7 @@ background: crimson !important;
     color: #fff;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+
 }
 .home .max-width{
     margin : auto 0 auto 40px;
