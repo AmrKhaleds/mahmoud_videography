@@ -18,7 +18,7 @@
     </head>
     <body>
         <!-- start loader -->
-        <div class="loader_bg">
+        <!-- <div class="loader_bg">
             <div class="loader">
                 <span style="--i:1;color:crimson;">M</span>
                 <span style="--i:2;">a</span>
@@ -34,7 +34,7 @@
                 <span style="--i:12;">e</span>
                 <span style="--i:13;">d</span>
             </div>
-        </div>
+        </div> -->
         <!-- End Loader -->
 
         <!-- Start Navbar -->
@@ -48,6 +48,7 @@
                     <li><a href="#">Skils</a></li>
                     <li><a href="#">Teams</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
 
                 </ul>
                 <div class="menu-btn">
@@ -103,14 +104,14 @@
                     </div>
                     <div class="card">
                         <div class="box">
-                            <i class="fa fa-chart-line"></i>
+                            <i class="fa fa-paint-brush"></i>
                             <div class="text">Designer</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae assumenda repellat iste quidem quos non, distinctio sunt. Quae laboriosam expedita veniam quaerat cum aperiam dignissimos amet, quos neque, at omnis!</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                            <i class="fa fa-code"></i>
+                            <i class="fa fa-paint-brush"></i>
                             <div class="text">Programmer</div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae assumenda repellat iste quidem quos non, distinctio sunt. Quae laboriosam expedita veniam quaerat cum aperiam dignissimos amet, quos neque, at omnis!</p>
                         </div>
@@ -120,13 +121,68 @@
         </section>
         <!-- End Services -->
 
-
+        <!-- Start Skills Section -->
+        <section class="skills" id="skills">
+            <div class="max-width">
+                <h2 class="title">My Skills</h2>
+                <div class="skills-content">
+                    <div class="column left">
+                        <div class="text">My Creative skills & expriences.</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque voluptatibus delectus illum temporibus ab iusto iste harum sit, atque similique nulla dicta assumenda voluptatum corrupti nam? Placeat corrupti, tempore ea blanditiis dicta eum deleniti exercitationem eveniet quae est corporis magnam numquam consequuntur sunt beatae tenetur obcaecati eos consequatur inventore perferendis id ut asperiores? Voluptatem, officia dolores! Officia eius porro eveniet?</p>
+                        <a href="#">Read more</a>
+                    </div>
+                    <div class="column right">
+                        <div class="bars">
+                            <div class="info">
+                                <span>DESIGN</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="line design"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>MONTAG</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="line montag"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>VEDIOGRAPY</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="line vediograpy"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>C.E.O</span>
+                                <span>72%</span>
+                            </div>
+                            <div class="line ceo"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>MARKTING</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="line markting"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Skills Section -->
 
 
 
 
         
-
+        <script>
+            function hideMenu() {
+                $(".navbar .max-width .menu").click();
+            }
+            </script>
+            
         <script>
             setTimeout(function () {
                 $('.loader_bg').fadeToggle();
