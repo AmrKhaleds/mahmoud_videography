@@ -22,7 +22,7 @@
     </head>
     <body>
         <!-- start loader -->
-        <div class="loader_bg">
+        <!-- <div class="loader_bg">
             <div class="loader">
                 <span style="--i:1;color:crimson;">M</span>
                 <span style="--i:2;">a</span>
@@ -38,7 +38,7 @@
                 <span style="--i:12;">e</span>
                 <span style="--i:13;">d</span>
             </div>
-        </div>
+        </div> -->
         <!-- End Loader -->
 
         <!-- Start Navbar -->
@@ -125,7 +125,7 @@
         </section>
         <!-- End Services -->
 
-        <!-- Start Skills Section -->
+        <!-- Start Skills -->
         <section class="skills" id="skills">
             <div class="max-width">
                 <h2 class="title">My Skills</h2>
@@ -175,9 +175,9 @@
                 </div>
             </div>
         </section>
-        <!-- End Skills Section -->
+        <!-- End Skills -->
 
-        <!-- Start teams -->
+        <!-- Start Teams -->
         <section class="teams">
             <div class="max-width">
                 <h2 class="title">My Teams</h2>
@@ -221,16 +221,76 @@
                 </div>
             </div>
         </section>
-        <!-- End teams -->
+        <!-- End Teams -->
+
+        <!-- Start Contact Form -->
+        <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Get in Touch</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius? </p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fa fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Mahmoud Khaled</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa fa-map-marker"></i>
+                                <div class="info">
+                                    <div class="head">Address</div>
+                                    <div class="sub-title">San Stefano, Alexandria Governorate, Egypt 21532</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fa fa-envelope email-icon"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">info@mk.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="text">Message me</div>
+                        <form action="#" method="POST">
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="text" placeholder="Name" name="name" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="email" placeholder="Email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <input type="text" placeholder="Subject" name="subject" required>
+                            </div>
+                            <div class="field textarea">
+                                <textarea cols="30" rows="10" placeholder="Describe project.."></textarea>
+                            </div>
+                            <div class="button">
+                                <button type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Contact Form -->
 
 
-        
-        <script>
-            function hideMenu() {
-                $(".navbar .max-width .menu").click();
-            }
-            </script>
-            
+
+
+
+
+
+
+
+
         <script>
             setTimeout(function () {
                 $('.loader_bg').fadeToggle();
